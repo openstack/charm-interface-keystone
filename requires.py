@@ -15,7 +15,6 @@ from charms.reactive import RelationBase
 from charms.reactive import hook
 from charms.reactive import scopes
 
-
 class KeystoneRequires(RelationBase):
     scope = scopes.GLOBAL
 
@@ -34,6 +33,7 @@ class KeystoneRequires(RelationBase):
     @hook('{requires:keystone}-relation-joined')
     def joined(self):
         self.set_state('{relation_name}.connected')
+        self.update_state()
 
     def update_state(self):
         if self.base_data_complete():
@@ -42,9 +42,19 @@ class KeystoneRequires(RelationBase):
                 self.set_state('{relation_name}.available.ssl')
             else:
                 self.remove_state('{relation_name}.available.ssl')
+            if self.ssl_data_complete_legacy():
+                self.set_state('{relation_name}.available.ssl_legacy')
+            else:
+                self.remove_state('{relation_name}.available.ssl_legacy')
+            if self.auth_data_complete():
+                self.set_state('{relation_name}.available.auth')
+            else:
+                self.remove_state('{relation_name}.available.auth')
         else:
             self.remove_state('{relation_name}.available')
             self.remove_state('{relation_name}.available.ssl')
+            self.remove_state('{relation_name}.available.ssl_legacy')
+            self.remove_state('{relation_name}.available.auth')
 
     @hook('{requires:keystone}-relation-changed')
     def changed(self):
@@ -60,14 +70,20 @@ class KeystoneRequires(RelationBase):
             'service_host': self.service_host(),
             'service_protocol': self.service_protocol(),
             'service_port': self.service_port(),
+            'auth_host': self.auth_host(),
+            'auth_protocol': self.auth_protocol(),
+            'auth_port': self.auth_port(),
+        }
+        if all(data.values()):
+            return True
+        return False
+
+    def auth_data_complete(self):
+        data = {
             'service_tenant': self.service_tenant(),
             'service_username': self.service_username(),
             'service_password': self.service_password(),
             'service_tenant_id': self.service_tenant_id(),
-            'auth_host': self.auth_host(),
-            'auth_protocol': self.auth_protocol(),
-            'auth_port': self.auth_port(),
-            'admin_token': self.admin_token(),
         }
         if all(data.values()):
             return True
@@ -75,8 +91,6 @@ class KeystoneRequires(RelationBase):
 
     def ssl_data_complete(self):
         data = {
-            'ssl_key': self.ssl_key(),
-            'ssl_cert': self.ssl_cert(),
             'ssl_cert_admin': self.ssl_cert_admin(),
             'ssl_cert_internal': self.ssl_cert_internal(),
             'ssl_cert_public': self.ssl_cert_public(),
@@ -84,7 +98,17 @@ class KeystoneRequires(RelationBase):
             'ssl_key_internal': self.ssl_key_internal(),
             'ssl_key_public': self.ssl_key_public(),
             'ca_cert': self.ca_cert(),
-            'https_keystone': self.https_keystone(),
+        }
+        for value in data.values():
+            if not value or value == '__null__':
+                return False
+        return True
+
+    def ssl_data_complete_legacy(self):
+        data = {
+            'ssl_key': self.ssl_key(),
+            'ssl_cert': self.ssl_cert(),
+            'ca_cert': self.ca_cert(),
         }
         for value in data.values():
             if not value or value == '__null__':
@@ -105,3 +129,6 @@ class KeystoneRequires(RelationBase):
         }
         self.set_local(**relation_info)
         self.set_remote(**relation_info)
+
+    def request_keystone_endpoint_information(self):
+        self.register_endpoints('None', 'None', 'None', 'None', 'None')
