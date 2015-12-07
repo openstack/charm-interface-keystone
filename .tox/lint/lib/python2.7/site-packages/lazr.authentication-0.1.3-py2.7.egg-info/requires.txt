@@ -1,0 +1,9 @@
+httplib2
+oauth
+setuptools
+wsgi_intercept
+zope.interface
+
+[docs]
+Sphinx
+z3c.recipe.sphinxdoc

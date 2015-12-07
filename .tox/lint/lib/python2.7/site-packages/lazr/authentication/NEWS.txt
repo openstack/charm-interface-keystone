@@ -1,0 +1,25 @@
+============================
+NEWS for lazr.authentication
+============================
+
+0.1.3 (2014-11-08)
+==================
+
+- Provide Python 3 support.
+- Fix wsgi compatibility bug.
+
+0.1.2 (2010-02-09)
+==================
+
+- Fixed a bug that prevented middleware instances from stacking.
+
+0.1.1 (2009-10-19)
+==================
+
+- Fixed a bug that caused the OAuth middleware to specify the
+  authentication realm as Basic.
+
+0.1.0 (2009-10-07)
+==================
+
+- Initial release

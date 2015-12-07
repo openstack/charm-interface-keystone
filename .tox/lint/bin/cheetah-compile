@@ -1,0 +1,3 @@
+#!/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/python2.7
+from Cheetah.CheetahWrapper import _cheetah_compile
+_cheetah_compile()

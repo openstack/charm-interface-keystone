@@ -1,0 +1,6 @@
+#!/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/python2.7
+
+from Cheetah import DirectiveAnalyzer
+
+if __name__ == '__main__':
+    DirectiveAnalyzer.main()

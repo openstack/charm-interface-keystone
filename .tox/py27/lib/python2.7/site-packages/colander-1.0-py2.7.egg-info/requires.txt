@@ -1,0 +1,9 @@
+translationstring
+iso8601
+
+[docs]
+Sphinx
+
+[testing]
+nose
+coverage

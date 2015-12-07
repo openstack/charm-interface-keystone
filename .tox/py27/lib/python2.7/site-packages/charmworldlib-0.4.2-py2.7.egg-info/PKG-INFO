@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: charmworldlib
+Version: 0.4.2
+Summary: Library to access charmworld data
+Home-page: https://launchpad.net/charmworldlib
+Author: Marco Ceppi
+Author-email: marco@ceppi.net
+License: GPL v3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)

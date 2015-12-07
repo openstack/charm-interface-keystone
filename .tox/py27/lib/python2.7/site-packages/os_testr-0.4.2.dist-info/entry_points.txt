@@ -1,0 +1,5 @@
+[console_scripts]
+ostestr = os_testr.os_testr:main
+subunit-trace = os_testr.subunit_trace:main
+subunit2html = os_testr.subunit2html:main
+

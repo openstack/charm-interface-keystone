@@ -1,0 +1,10 @@
+#!/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/py27/bin/python2.7
+# EASY-INSTALL-ENTRY-SCRIPT: 'keyring==5.7','console_scripts','keyring'
+__requires__ = 'keyring==5.7'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('keyring==5.7', 'console_scripts', 'keyring')()
+    )

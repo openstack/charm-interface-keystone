@@ -1,0 +1,2044 @@
+actionid: lint
+msg: getenv
+cmdargs: [local('/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/pip'), 'install', '--allow-unverified', 'python-apt', '-r/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt']
+env: {'GOPATH': '/home/ubuntu/golang', 'BYOBU_TTY': '/dev/pts/0', 'BYOBU_WINDOW_NAME': '-', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'SSH_CLIENT': '10.172.195.24 60082 22', 'LOGNAME': 'ubuntu', 'USER': 'ubuntu', 'HOME': '/home/ubuntu', 'PATH': '/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ubuntu/scripts:/home/ubuntu/scripts', 'BYOBU_DISTRO': 'Ubuntu', 'BYOBU_SED': 'sed', 'LANG': 'en_US.UTF-8', 'TERM': 'screen', 'SHELL': '/bin/bash', 'SHLVL': '3', 'LESS_TERMCAP_me': '\x1b[0m', 'LESS_TERMCAP_md': '\x1b[01;38;5;180m', 'LESS_TERMCAP_mb': '\x1b[01;31m', 'BYOBU_RUN_DIR': '/dev/shm/byobu-ubuntu-xb2jIImC', 'BYOBU_BACKEND': 'tmux', 'PYTHONHASHSEED': '0', '_': '/usr/local/bin/tox', 'BYOBU_PAGER': 'sensible-pager', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GREP_COLORS': 'ms=01;38;5;202:mc=01;31:sl=:cx=:fn=01;38;5;132:ln=32:bn=32:se=00;38;5;242', 'BYOBU_DARK': '#333333', 'BYOBU_LIGHT': '#EEEEEE', 'VIRTUAL_ENV': '/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint', 'TMUX': '/tmp/tmux-1000/default,9937,1', 'BYOBU_DATE': '%Y-%m-%d ', 'BYOBU_HIGHLIGHT': '#DD4814', 'BYOBU_PREFIX': '/usr', '_byobu_sourced': '1', 'BYOBU_ACCENT': '#75507B', 'XDG_SESSION_ID': '447', 'BYOBU_CONFIG_DIR': '/home/ubuntu/.byobu', 'BYOBU_ULIMIT': 'ulimit', 'LESS_TERMCAP_ue': '\x1b[0m', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'BYOBU_TIME': '%H:%M:%S', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/ubuntu/features/layers', 'BYOBU_READLINK': 'readlink', 'LESS_TERMCAP_se': '\x1b[0m', 'PWD': '/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone', 'LESS_TERMCAP_us': '\x1b[04;38;5;139m', 'BYOBU_PYTHON': 'python3', 'BYOBU_CHARMAP': 'UTF-8', 'MAIL': '/var/mail/ubuntu', 'LESS_TERMCAP_so': '\x1b[03;38;5;202m', 'SSH_CONNECTION': '10.172.195.24 57560 10.5.17.29 22', 'TMUX_PANE': '%4'}
+
+Downloading/unpacking flake8>=2.2.4,<=2.4.1 (from -r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 1))
+  Downloading flake8-2.4.1-py2.py3-none-any.whl
+Downloading/unpacking os-testr>=0.4.1 (from -r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading os_testr-0.4.2-py2-none-any.whl
+Downloading/unpacking charm-tools (from -r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/charm-tools/setup.py) egg_info for package charm-tools
+    
+    warning: no previously-included files matching '*.pyc' found under directory 'charmtools'
+Downloading/unpacking mccabe>=0.2.1,<0.4 (from flake8>=2.2.4,<=2.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 1))
+  Downloading mccabe-0.3.1-py2.py3-none-any.whl
+Downloading/unpacking pep8>=1.5.7,!=1.6.0,!=1.6.1,!=1.6.2 (from flake8>=2.2.4,<=2.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 1))
+  Downloading pep8-1.5.7-py2.py3-none-any.whl
+Downloading/unpacking pyflakes>=0.8.1,<0.9 (from flake8>=2.2.4,<=2.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 1))
+  Downloading pyflakes-0.8.1-py2.py3-none-any.whl
+Downloading/unpacking testrepository>=0.0.18 (from os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/testrepository/setup.py) egg_info for package testrepository
+    
+Downloading/unpacking testtools>=1.4.0 (from os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking Babel>=1.3 (from os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking pbr>=1.3,<2.0 (from os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking python-subunit>=0.0.18 (from os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking launchpadlib (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/launchpadlib/setup.py) egg_info for package launchpadlib
+    
+Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.7 (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking cheetah (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/cheetah/setup.py) egg_info for package cheetah
+    
+    warning: no files found matching 'examples'
+    warning: no files found matching 'docs'
+    warning: no files found matching 'bin'
+    warning: no files found matching '*' under directory 'docs'
+    warning: no files found matching '*' under directory 'examples'
+    warning: no previously-included files matching '*.pyc' found under directory 'cheetah'
+    warning: no previously-included files matching '*~' found under directory 'cheetah'
+    warning: no previously-included files matching '*.aux' found under directory 'cheetah'
+    warning: no previously-included files matching '*~' found under directory 'docs'
+    warning: no previously-included files matching '*.aux' found under directory 'docs'
+Downloading/unpacking pyyaml (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/pyyaml/setup.py) egg_info for package pyyaml
+    
+Downloading/unpacking pycrypto (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/pycrypto/setup.py) egg_info for package pycrypto
+    
+Downloading/unpacking paramiko (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking bzr (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/bzr/setup.py) egg_info for package bzr
+    No Cython, trying Pyrex...
+    
+    The python package 'Pyrex' is not available. If the .c files are available,
+    they will be built, but modifying the .pyx files will not rebuild them.
+    
+    
+Downloading/unpacking requests (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking charmworldlib (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading charmworldlib-0.4.2.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/charmworldlib/setup.py) egg_info for package charmworldlib
+    
+Downloading/unpacking blessings (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading blessings-1.6.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/blessings/setup.py) egg_info for package blessings
+    
+Downloading/unpacking ruamel.yaml (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/ruamel.yaml/setup.py) egg_info for package ruamel.yaml
+    author -> Anthon van der Neut
+    author_email -> a.van.der.neut@ruamel.eu
+    classifiers -> ['Development Status :: 4 - Beta', 'Intended Audience :: Developers', 'License :: OSI Approved :: MIT License', 'Operating System :: OS Independent', 'Programming Language :: Python', 'Programming Language :: Python :: 2.6', 'Programming Language :: Python :: 2.7', 'Programming Language :: Python :: 3.3', 'Programming Language :: Python :: 3.4', 'Programming Language :: Python :: 3.5', 'Programming Language :: Python :: Implementation :: CPython', 'Programming Language :: Python :: Implementation :: PyPy', 'Programming Language :: Python :: Implementation :: Jython', 'Topic :: Software Development :: Libraries :: Python Modules', 'Topic :: Text Processing :: Markup']
+    cmdclass -> {'install_lib': <class __main__.MyInstallLib at 0x7f6b29e60120>}
+    description -> ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
+    entry_points -> None
+    ext_modules -> [<setuptools.extension.Extension instance at 0x7f6b28082ab8>]
+    install_requires -> ['ruamel.base>=1.0.0', 'ruamel.ordereddict']
+    license -> MIT license
+    name -> ruamel.yaml
+    namespace_packages -> ['ruamel']
+    package_data -> {'ruamel.yaml': ['LICENSE']}
+    package_dir -> {'ruamel': '.ruamel', 'ruamel.yaml': '.'}
+    packages -> ['ruamel', 'ruamel.yaml']
+    url -> https://bitbucket.org/ruamel/yaml
+    version -> 0.10.12
+    
+Downloading/unpacking pathspec (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading pathspec-0.3.4.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/pathspec/setup.py) egg_info for package pathspec
+    
+Downloading/unpacking otherstuf (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading otherstuf-1.1.0-py2.py3-none-any.whl
+Downloading/unpacking path.py (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading path.py-8.1.2-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): pip in ./.tox/lint/lib/python2.7/site-packages (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking jujubundlelib (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading jujubundlelib-0.4.1.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/jujubundlelib/setup.py) egg_info for package jujubundlelib
+    
+    warning: no previously-included files matching '__pycache__' found under directory '*'
+    warning: no previously-included files matching '*.py[co]' found under directory '*'
+Downloading/unpacking virtualenv (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking colander (from charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/colander/setup.py) egg_info for package colander
+    
+Downloading/unpacking fixtures (from testrepository>=0.0.18->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking python-mimeparse (from testtools>=1.4.0->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading python-mimeparse-0.1.4.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/python-mimeparse/setup.py) egg_info for package python-mimeparse
+    
+Downloading/unpacking extras (from testtools>=1.4.0->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading extras-0.0.3.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/extras/setup.py) egg_info for package extras
+    
+Downloading/unpacking traceback2 (from testtools>=1.4.0->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading traceback2-1.4.0-py2.py3-none-any.whl
+Downloading/unpacking unittest2>=1.0.0 (from testtools>=1.4.0->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking pytz>=0a (from Babel>=1.3->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+Downloading/unpacking httplib2 (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/httplib2/setup.py) egg_info for package httplib2
+    
+Downloading/unpacking keyring (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/keyring/setup.py) egg_info for package keyring
+    
+    Installed /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/keyring/setuptools_scm-1.9.0-py2.7.egg
+    your setuptools is too old (<12)
+    setuptools_scm functionality is degraded
+    
+Downloading/unpacking lazr.restfulclient>=0.9.19 (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/lazr.restfulclient/setup.py) egg_info for package lazr.restfulclient
+    
+Downloading/unpacking lazr.uri (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading lazr.uri-1.0.3.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/lazr.uri/setup.py) egg_info for package lazr.uri
+    
+Downloading/unpacking oauth (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading oauth-1.0.1.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/oauth/setup.py) egg_info for package oauth
+    
+Requirement already satisfied (use --upgrade to upgrade): setuptools in ./.tox/lint/lib/python2.7/site-packages (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking testresources (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading testresources-1.0.0-py2.py3-none-any.whl
+Downloading/unpacking wadllib (from launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/wadllib/setup.py) egg_info for package wadllib
+    
+Downloading/unpacking Markdown>=2.0.1 (from cheetah->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/Markdown/setup.py) egg_info for package Markdown
+    
+Downloading/unpacking ecdsa>=0.11 (from paramiko->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+Downloading/unpacking ruamel.base>=1.0.0 (from ruamel.yaml->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading ruamel.base-1.0.0-py2-none-any.whl
+Downloading/unpacking ruamel.ordereddict (from ruamel.yaml->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/ruamel.ordereddict/setup.py) egg_info for package ruamel.ordereddict
+    
+Downloading/unpacking stuf>=0.9.16 (from otherstuf->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading stuf-0.9.16-py2-none-any.whl
+Downloading/unpacking translationstring (from colander->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading translationstring-1.3-py2.py3-none-any.whl
+Downloading/unpacking iso8601 (from colander->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading iso8601-0.1.11-py2.py3-none-any.whl
+Downloading/unpacking six (from fixtures->testrepository>=0.0.18->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Downloading/unpacking linecache2 (from traceback2->testtools>=1.4.0->os-testr>=0.4.1->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 2))
+  Downloading linecache2-1.0.0-py2.py3-none-any.whl
+Downloading/unpacking lazr.authentication (from lazr.restfulclient>=0.9.19->launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading lazr.authentication-0.1.3.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/lazr.authentication/setup.py) egg_info for package lazr.authentication
+    
+Downloading/unpacking wsgi-intercept (from lazr.restfulclient>=0.9.19->launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading wsgi_intercept-0.10.3.tar.gz
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/wsgi-intercept/setup.py) egg_info for package wsgi-intercept
+    
+Downloading/unpacking parse>=1.6.6 (from stuf>=0.9.16->otherstuf->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Downloading parse-1.6.6-py2-none-any.whl
+Downloading/unpacking zope.interface (from lazr.authentication->lazr.restfulclient>=0.9.19->launchpadlib->charm-tools->-r /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/test-requirements.txt (line 3))
+  Running setup.py (path:/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/zope.interface/setup.py) egg_info for package zope.interface
+    
+    warning: no previously-included files matching '*.dll' found anywhere in distribution
+    warning: no previously-included files matching '*.pyc' found anywhere in distribution
+    warning: no previously-included files matching '*.pyo' found anywhere in distribution
+    warning: no previously-included files matching '*.so' found anywhere in distribution
+    warning: no previously-included files matching 'coverage.xml' found anywhere in distribution
+    no previously-included directories found matching 'docs/_build'
+Installing collected packages: flake8, os-testr, charm-tools, mccabe, pep8, pyflakes, testrepository, testtools, Babel, pbr, python-subunit, launchpadlib, cheetah, pyyaml, pycrypto, paramiko, bzr, requests, charmworldlib, blessings, ruamel.yaml, pathspec, otherstuf, path.py, jujubundlelib, virtualenv, colander, fixtures, python-mimeparse, extras, traceback2, unittest2, pytz, httplib2, keyring, lazr.restfulclient, lazr.uri, oauth, testresources, wadllib, Markdown, ecdsa, ruamel.base, ruamel.ordereddict, stuf, translationstring, iso8601, six, linecache2, lazr.authentication, wsgi-intercept, parse, zope.interface
+  Running setup.py install for charm-tools
+    
+    warning: no previously-included files matching '*.pyc' found under directory 'charmtools'
+    Installing charm-test script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-refresh script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-proof script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-list script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-subscribers script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-build script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-review-queue script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-inspect script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-unpromulgate script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-getall script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-info script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-create script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-layers script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing juju-bundle script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-compose script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-generate script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-review script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-get script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-search script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-update script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-version script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-help script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-add script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing juju-test script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing juju-charm script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+    Installing charm-promulgate script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+  Running setup.py install for testrepository
+    changing mode of build/scripts-2.7/testr from 664 to 775
+    
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/testr to 775
+  Running setup.py install for launchpadlib
+    
+  Running setup.py install for cheetah
+    building 'Cheetah._namemapper' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c cheetah/c/_namemapper.c -o build/temp.linux-x86_64-2.7/cheetah/c/_namemapper.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/cheetah/c/_namemapper.o -o build/lib.linux-x86_64-2.7/Cheetah/_namemapper.so
+    changing mode of build/scripts-2.7/cheetah-compile from 664 to 775
+    changing mode of build/scripts-2.7/cheetah from 664 to 775
+    changing mode of build/scripts-2.7/cheetah-analyze from 664 to 775
+    
+    warning: no files found matching 'examples'
+    warning: no files found matching 'docs'
+    warning: no files found matching 'bin'
+    warning: no files found matching '*' under directory 'docs'
+    warning: no files found matching '*' under directory 'examples'
+    warning: no previously-included files matching '*.pyc' found under directory 'cheetah'
+    warning: no previously-included files matching '*~' found under directory 'cheetah'
+    warning: no previously-included files matching '*.aux' found under directory 'cheetah'
+    warning: no previously-included files matching '*~' found under directory 'docs'
+    warning: no previously-included files matching '*.aux' found under directory 'docs'
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/cheetah to 775
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/cheetah-analyze to 775
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/cheetah-compile to 775
+  Running setup.py install for pyyaml
+    checking if libyaml is compilable
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c build/temp.linux-x86_64-2.7/check_libyaml.c -o build/temp.linux-x86_64-2.7/check_libyaml.o
+    checking if libyaml is linkable
+    x86_64-linux-gnu-gcc -pthread build/temp.linux-x86_64-2.7/check_libyaml.o -lyaml -o build/temp.linux-x86_64-2.7/check_libyaml
+    building '_yaml' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/_yaml.c -o build/temp.linux-x86_64-2.7/ext/_yaml.o
+    In file included from ext/_yaml.c:343:0:
+    ext/_yaml.h:6:0: warning: "PyUnicode_FromString" redefined [enabled by default]
+     #define PyUnicode_FromString(s) PyUnicode_DecodeUTF8((s), strlen(s), "strict")
+     ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:281:0: note: this is the location of the previous definition
+     # define PyUnicode_FromString PyUnicodeUCS4_FromString
+     ^
+    ext/_yaml.c: In function ‘__pyx_pf_5_yaml_get_version_string’:
+    ext/_yaml.c:1346:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+       __pyx_v_value = yaml_get_version_string();
+                     ^
+    ext/_yaml.c: In function ‘__pyx_pf_5_yaml_7CParser___init__’:
+    ext/_yaml.c:2471:5: warning: passing argument 2 of ‘yaml_parser_set_input’ from incompatible pointer type [enabled by default]
+         yaml_parser_set_input((&__pyx_v_self->parser), __pyx_f_5_yaml_input_handler, ((void *)__pyx_v_self));
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:1367:1: note: expected ‘int (*)(void *, unsigned char *, size_t,  size_t *)’ but argument is of type ‘int (*)(void *, char *, int,  int *)’
+     yaml_parser_set_input(yaml_parser_t *parser,
+     ^
+    ext/_yaml.c:2664:5: warning: pointer targets in passing argument 2 of ‘yaml_parser_set_input_string’ differ in signedness [-Wpointer-sign]
+         yaml_parser_set_input_string((&__pyx_v_self->parser), PyString_AS_STRING(__pyx_v_stream), PyString_GET_SIZE(__pyx_v_stream));
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:1341:1: note: expected ‘const unsigned char *’ but argument is of type ‘char *’
+     yaml_parser_set_input_string(yaml_parser_t *parser,
+     ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__token_to_object’:
+    ext/_yaml.c:4183:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 417; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4183:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 417; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4195:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.prefix); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 418; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4195:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.prefix); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 418; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4741:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.alias.value); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4741:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.alias.value); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4792:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = PyUnicode_FromString(__pyx_v_token->data.anchor.value); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4792:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = PyUnicode_FromString(__pyx_v_token->data.anchor.value); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4843:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag.handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4843:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag.handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4855:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag.suffix); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:4855:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_token->data.tag.suffix); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:4938:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_token->data.scalar.value, __pyx_v_token->data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__event_to_object’:
+    ext/_yaml.c:6435:9: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:6435:9: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:6447:9: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->prefix); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:6447:9: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->prefix); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:6616:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.alias.anchor); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:6616:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.alias.anchor); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:6687:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_1 = PyUnicode_FromString(__pyx_v_event->data.scalar.anchor); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 591; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:6687:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_1 = PyUnicode_FromString(__pyx_v_event->data.scalar.anchor); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 591; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:6722:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_1 = PyUnicode_FromString(__pyx_v_event->data.scalar.tag); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 594; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:6722:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_1 = PyUnicode_FromString(__pyx_v_event->data.scalar.tag); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 594; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:6737:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_1 = PyUnicode_DecodeUTF8(__pyx_v_event->data.scalar.value, __pyx_v_event->data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 595; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:7031:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 620; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:7031:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 620; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:7066:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:7066:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_3 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:7253:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.anchor); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 637; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:7253:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.anchor); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 637; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:7288:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 640; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:7288:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 640; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_node’:
+    ext/_yaml.c:8704:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.alias.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 734; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:8704:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.alias.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 734; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:8924:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 750; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:8924:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 750; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:8962:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:8962:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 753; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:9000:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 756; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:9000:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 756; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_scalar_node’:
+    ext/_yaml.c:9532:3: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+       __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_self->parsed_event.data.scalar.value, __pyx_v_self->parsed_event.data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 791; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+       ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c:9688:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_9 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.tag); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 804; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:9688:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_9 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.tag); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 804; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_sequence_node’:
+    ext/_yaml.c:10128:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 837; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:10128:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 837; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_7CParser__compose_mapping_node’:
+    ext/_yaml.c:10654:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 876; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_yaml.c:16:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_yaml.c:10654:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 876; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_yaml.c:16:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_yaml.c: In function ‘__pyx_pf_5_yaml_8CEmitter___init__’:
+    ext/_yaml.c:11721:3: warning: passing argument 2 of ‘yaml_emitter_set_output’ from incompatible pointer type [enabled by default]
+       yaml_emitter_set_output((&__pyx_v_self->emitter), __pyx_f_5_yaml_output_handler, ((void *)__pyx_v_self));
+       ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:1829:1: note: expected ‘int (*)(void *, unsigned char *, size_t)’ but argument is of type ‘int (*)(void *, char *, int)’
+     yaml_emitter_set_output(yaml_emitter_t *emitter,
+     ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_8CEmitter__object_to_event’:
+    ext/_yaml.c:12898:44: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                                ^
+    ext/_yaml.c:12991:44: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                                ^
+    ext/_yaml.c:13248:5: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = ((yaml_alias_event_initialize(__pyx_v_event, __pyx_v_anchor) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:553:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+     ^
+    ext/_yaml.c:13824:5: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:13824:5: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:13824:5: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:14166:5: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:14166:5: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:14508:5: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:14508:5: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c: In function ‘__pyx_pf_5_yaml_8CEmitter_12serialize’:
+    ext/_yaml.c:15784:42: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+           __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                              ^
+    ext/_yaml.c:15877:42: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+           __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                              ^
+    ext/_yaml.c: In function ‘__pyx_f_5_yaml_8CEmitter__serialize_node’:
+    ext/_yaml.c:16616:5: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_alias_event_initialize((&__pyx_v_event), __pyx_v_anchor) == 0) != 0);
+         ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:553:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+     ^
+    ext/_yaml.c:17195:7: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17195:7: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17195:7: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17473:7: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17473:7: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17874:7: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_yaml.c:17874:7: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_8 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+           ^
+    In file included from ext/_yaml.h:2:0,
+                     from ext/_yaml.c:343:
+    /usr/include/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/ext/_yaml.o -lyaml -o build/lib.linux-x86_64-2.7/_yaml.so
+    
+  Running setup.py install for pycrypto
+    checking for gcc... gcc
+    checking whether the C compiler works... yes
+    checking for C compiler default output file name... a.out
+    checking for suffix of executables...
+    checking whether we are cross compiling... no
+    checking for suffix of object files... o
+    checking whether we are using the GNU C compiler... yes
+    checking whether gcc accepts -g... yes
+    checking for gcc option to accept ISO C89... none needed
+    checking for __gmpz_init in -lgmp... no
+    checking for __gmpz_init in -lmpir... no
+    checking whether mpz_powm is declared... no
+    checking whether mpz_powm_sec is declared... no
+    checking how to run the C preprocessor... gcc -E
+    checking for grep that handles long lines and -e... /bin/grep
+    checking for egrep... /bin/grep -E
+    checking for ANSI C header files... yes
+    checking for sys/types.h... yes
+    checking for sys/stat.h... yes
+    checking for stdlib.h... yes
+    checking for string.h... yes
+    checking for memory.h... yes
+    checking for strings.h... yes
+    checking for inttypes.h... yes
+    checking for stdint.h... yes
+    checking for unistd.h... yes
+    checking for inttypes.h... (cached) yes
+    checking limits.h usability... yes
+    checking limits.h presence... yes
+    checking for limits.h... yes
+    checking stddef.h usability... yes
+    checking stddef.h presence... yes
+    checking for stddef.h... yes
+    checking for stdint.h... (cached) yes
+    checking for stdlib.h... (cached) yes
+    checking for string.h... (cached) yes
+    checking wchar.h usability... yes
+    checking wchar.h presence... yes
+    checking for wchar.h... yes
+    checking for inline... inline
+    checking for int16_t... yes
+    checking for int32_t... yes
+    checking for int64_t... yes
+    checking for int8_t... yes
+    checking for size_t... yes
+    checking for uint16_t... yes
+    checking for uint32_t... yes
+    checking for uint64_t... yes
+    checking for uint8_t... yes
+    checking for stdlib.h... (cached) yes
+    checking for GNU libc compatible malloc... yes
+    checking for memmove... yes
+    checking for memset... yes
+    configure: creating ./config.status
+    config.status: creating src/config.h
+    warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
+    building 'Crypto.Hash._MD2' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD2.c -o build/temp.linux-x86_64-2.7/src/MD2.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/MD2.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD2.so
+    building 'Crypto.Hash._MD4' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD4.c -o build/temp.linux-x86_64-2.7/src/MD4.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/MD4.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD4.so
+    building 'Crypto.Hash._SHA256' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA256.c -o build/temp.linux-x86_64-2.7/src/SHA256.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA256.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA256.so
+    building 'Crypto.Hash._SHA224' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA224.c -o build/temp.linux-x86_64-2.7/src/SHA224.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA224.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA224.so
+    building 'Crypto.Hash._SHA384' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA384.c -o build/temp.linux-x86_64-2.7/src/SHA384.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA384.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA384.so
+    building 'Crypto.Hash._SHA512' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA512.c -o build/temp.linux-x86_64-2.7/src/SHA512.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA512.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA512.so
+    building 'Crypto.Hash._RIPEMD160' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -DPCT_LITTLE_ENDIAN=1 -Isrc/ -I/usr/include/python2.7 -c src/RIPEMD160.c -o build/temp.linux-x86_64-2.7/src/RIPEMD160.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/RIPEMD160.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_RIPEMD160.so
+    building 'Crypto.Cipher._AES' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/AES.c -o build/temp.linux-x86_64-2.7/src/AES.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/AES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_AES.so
+    building 'Crypto.Cipher._ARC2' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC2.c -o build/temp.linux-x86_64-2.7/src/ARC2.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/ARC2.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC2.so
+    building 'Crypto.Cipher._Blowfish' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/Blowfish.c -o build/temp.linux-x86_64-2.7/src/Blowfish.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/Blowfish.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_Blowfish.so
+    building 'Crypto.Cipher._CAST' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/CAST.c -o build/temp.linux-x86_64-2.7/src/CAST.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/CAST.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_CAST.so
+    building 'Crypto.Cipher._DES' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES.c -o build/temp.linux-x86_64-2.7/src/DES.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/DES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES.so
+    building 'Crypto.Cipher._DES3' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES3.c -o build/temp.linux-x86_64-2.7/src/DES3.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/DES3.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES3.so
+    building 'Crypto.Cipher._ARC4' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC4.c -o build/temp.linux-x86_64-2.7/src/ARC4.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/ARC4.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC4.so
+    building 'Crypto.Cipher._XOR' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/XOR.c -o build/temp.linux-x86_64-2.7/src/XOR.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/XOR.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_XOR.so
+    building 'Crypto.Util.strxor' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/strxor.c -o build/temp.linux-x86_64-2.7/src/strxor.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/strxor.o -o build/lib.linux-x86_64-2.7/Crypto/Util/strxor.so
+    building 'Crypto.Util._counter' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/_counter.c -o build/temp.linux-x86_64-2.7/src/_counter.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/_counter.o -o build/lib.linux-x86_64-2.7/Crypto/Util/_counter.so
+    
+  Running setup.py install for bzr
+    No Cython, trying Pyrex...
+    
+    The python package 'Pyrex' is not available. If the .c files are available,
+    they will be built, but modifying the .pyx files will not rebuild them.
+    
+    building 'bzrlib._annotator_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_annotator_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_annotator_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_annotator_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_annotator_pyx.so
+    building 'bzrlib._bencode_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_bencode_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_bencode_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_bencode_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_bencode_pyx.so
+    building 'bzrlib._chunks_to_lines_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_chunks_to_lines_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_chunks_to_lines_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_chunks_to_lines_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_chunks_to_lines_pyx.so
+    building 'bzrlib._groupcompress_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_groupcompress_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_groupcompress_pyx.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/diff-delta.c -o build/temp.linux-x86_64-2.7/bzrlib/diff-delta.o
+    bzrlib/diff-delta.c: In function ‘pack_delta_index’:
+    bzrlib/diff-delta.c:223:67: warning: variable ‘copy_from’ set but not used [-Wunused-but-set-variable]
+         struct index_entry *packed_entry, **packed_hash, *old_entry, *copy_from;
+                                                                       ^
+    bzrlib/diff-delta.c: In function ‘create_delta’:
+    bzrlib/diff-delta.c:908:19: warning: variable ‘source_size’ set but not used [-Wunused-but-set-variable]
+         unsigned long source_size;
+                       ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_groupcompress_pyx.o build/temp.linux-x86_64-2.7/bzrlib/diff-delta.o -o build/lib.linux-x86_64-2.7/bzrlib/_groupcompress_pyx.so
+    building 'bzrlib._knit_load_data_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_knit_load_data_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_knit_load_data_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_knit_load_data_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_knit_load_data_pyx.so
+    building 'bzrlib._known_graph_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_known_graph_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_known_graph_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_known_graph_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_known_graph_pyx.so
+    building 'bzrlib._rio_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_rio_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_rio_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_rio_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_rio_pyx.so
+    building 'bzrlib._dirstate_helpers_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_dirstate_helpers_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_dirstate_helpers_pyx.o
+    bzrlib/_dirstate_helpers_pyx.c: In function ‘__pyx_pf_6bzrlib_21_dirstate_helpers_pyx_bisect_dirblock’:
+    bzrlib/_dirstate_helpers_pyx.c:3514:13: warning: variable ‘__pyx_v_cache’ set but not used [-Wunused-but-set-variable]
+       PyObject *__pyx_v_cache = 0;
+                 ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_dirstate_helpers_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_dirstate_helpers_pyx.so
+    building 'bzrlib._readdir_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_readdir_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_readdir_pyx.o
+    bzrlib/_readdir_pyx.c: In function ‘__pyx_f_6bzrlib_12_readdir_pyx__read_dir’:
+    bzrlib/_readdir_pyx.c:1096:22: warning: ‘__pyx_exc_lineno’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+             __pyx_lineno = __pyx_exc_lineno;
+                          ^
+    bzrlib/_readdir_pyx.c:1023:24: warning: ‘__pyx_exc_lineno’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+               __pyx_lineno = __pyx_exc_lineno;
+                            ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_readdir_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_readdir_pyx.so
+    building 'bzrlib._chk_map_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_chk_map_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_chk_map_pyx.o
+    bzrlib/_chk_map_pyx.c: In function ‘__pyx_f_6bzrlib_12_chk_map_pyx_safe_interned_string_from_size’:
+    bzrlib/_chk_map_pyx.c:282:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+         __pyx_3 = PyInt_FromLong(((int)__pyx_v_s)); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; goto __pyx_L1;}
+                                   ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_chk_map_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_chk_map_pyx.so
+    building 'bzrlib._patiencediff_c' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_patiencediff_c.c -o build/temp.linux-x86_64-2.7/bzrlib/_patiencediff_c.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_patiencediff_c.o -o build/lib.linux-x86_64-2.7/bzrlib/_patiencediff_c.so
+    building 'bzrlib._simple_set_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_simple_set_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_simple_set_pyx.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_simple_set_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_simple_set_pyx.so
+    building 'bzrlib._static_tuple_c' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_static_tuple_c.c -o build/temp.linux-x86_64-2.7/bzrlib/_static_tuple_c.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_static_tuple_c.o -o build/lib.linux-x86_64-2.7/bzrlib/_static_tuple_c.so
+    building 'bzrlib._btree_serializer_pyx' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c bzrlib/_btree_serializer_pyx.c -o build/temp.linux-x86_64-2.7/bzrlib/_btree_serializer_pyx.o
+    bzrlib/_btree_serializer_pyx.c: In function ‘__pyx_f_6bzrlib_21_btree_serializer_pyx_safe_string_from_size’:
+    bzrlib/_btree_serializer_pyx.c:880:33: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+         __pyx_t_3 = PyInt_FromLong(((int)__pyx_v_s)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+                                     ^
+    bzrlib/_btree_serializer_pyx.c: In function ‘__pyx_f_6bzrlib_21_btree_serializer_pyx_safe_interned_string_from_size’:
+    bzrlib/_btree_serializer_pyx.c:974:33: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+         __pyx_t_3 = PyInt_FromLong(((int)__pyx_v_s)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+                                     ^
+    bzrlib/_btree_serializer_pyx.c: In function ‘__pyx_f_6bzrlib_21_btree_serializer_pyx_17GCCHKSHA1LeafNode__lookup_record’:
+    bzrlib/_btree_serializer_pyx.c:4415:8: warning: variable ‘__pyx_v_local_n_cmp’ set but not used [-Wunused-but-set-variable]
+       long __pyx_v_local_n_cmp;
+            ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/bzrlib/_btree_serializer_pyx.o -o build/lib.linux-x86_64-2.7/bzrlib/_btree_serializer_pyx.so
+    changing mode of build/scripts-2.7/bzr from 664 to 775
+    Compile: po/ko.po -> bzrlib/locale/ko/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ko/LC_MESSAGES/bzr.mo po/ko.po
+    Compile: po/sco.po -> bzrlib/locale/sco/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/sco/LC_MESSAGES/bzr.mo po/sco.po
+    Compile: po/pl.po -> bzrlib/locale/pl/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/pl/LC_MESSAGES/bzr.mo po/pl.po
+    Compile: po/nb.po -> bzrlib/locale/nb/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/nb/LC_MESSAGES/bzr.mo po/nb.po
+    Compile: po/ug.po -> bzrlib/locale/ug/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ug/LC_MESSAGES/bzr.mo po/ug.po
+    Compile: po/ast.po -> bzrlib/locale/ast/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ast/LC_MESSAGES/bzr.mo po/ast.po
+    Compile: po/cs.po -> bzrlib/locale/cs/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/cs/LC_MESSAGES/bzr.mo po/cs.po
+    Compile: po/vi.po -> bzrlib/locale/vi/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/vi/LC_MESSAGES/bzr.mo po/vi.po
+    Compile: po/my.po -> bzrlib/locale/my/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/my/LC_MESSAGES/bzr.mo po/my.po
+    Compile: po/ms.po -> bzrlib/locale/ms/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ms/LC_MESSAGES/bzr.mo po/ms.po
+    Compile: po/gl.po -> bzrlib/locale/gl/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/gl/LC_MESSAGES/bzr.mo po/gl.po
+    Compile: po/fo.po -> bzrlib/locale/fo/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/fo/LC_MESSAGES/bzr.mo po/fo.po
+    Compile: po/zh_CN.po -> bzrlib/locale/zh_CN/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/zh_CN/LC_MESSAGES/bzr.mo po/zh_CN.po
+    Compile: po/nl.po -> bzrlib/locale/nl/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/nl/LC_MESSAGES/bzr.mo po/nl.po
+    Compile: po/sr.po -> bzrlib/locale/sr/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/sr/LC_MESSAGES/bzr.mo po/sr.po
+    Compile: po/uk.po -> bzrlib/locale/uk/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/uk/LC_MESSAGES/bzr.mo po/uk.po
+    Compile: po/tr.po -> bzrlib/locale/tr/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/tr/LC_MESSAGES/bzr.mo po/tr.po
+    Compile: po/pt_BR.po -> bzrlib/locale/pt_BR/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/pt_BR/LC_MESSAGES/bzr.mo po/pt_BR.po
+    Compile: po/ro.po -> bzrlib/locale/ro/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ro/LC_MESSAGES/bzr.mo po/ro.po
+    Compile: po/es.po -> bzrlib/locale/es/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/es/LC_MESSAGES/bzr.mo po/es.po
+    Compile: po/ru.po -> bzrlib/locale/ru/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ru/LC_MESSAGES/bzr.mo po/ru.po
+    Compile: po/fa.po -> bzrlib/locale/fa/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/fa/LC_MESSAGES/bzr.mo po/fa.po
+    Compile: po/it.po -> bzrlib/locale/it/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/it/LC_MESSAGES/bzr.mo po/it.po
+    Compile: po/el.po -> bzrlib/locale/el/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/el/LC_MESSAGES/bzr.mo po/el.po
+    Compile: po/he.po -> bzrlib/locale/he/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/he/LC_MESSAGES/bzr.mo po/he.po
+    Compile: po/ca.po -> bzrlib/locale/ca/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ca/LC_MESSAGES/bzr.mo po/ca.po
+    Compile: po/oc.po -> bzrlib/locale/oc/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/oc/LC_MESSAGES/bzr.mo po/oc.po
+    Compile: po/sv.po -> bzrlib/locale/sv/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/sv/LC_MESSAGES/bzr.mo po/sv.po
+    Compile: po/id.po -> bzrlib/locale/id/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/id/LC_MESSAGES/bzr.mo po/id.po
+    Compile: po/bs.po -> bzrlib/locale/bs/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/bs/LC_MESSAGES/bzr.mo po/bs.po
+    Compile: po/en_AU.po -> bzrlib/locale/en_AU/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/en_AU/LC_MESSAGES/bzr.mo po/en_AU.po
+    Compile: po/sk.po -> bzrlib/locale/sk/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/sk/LC_MESSAGES/bzr.mo po/sk.po
+    Compile: po/en_GB.po -> bzrlib/locale/en_GB/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/en_GB/LC_MESSAGES/bzr.mo po/en_GB.po
+    Compile: po/ar.po -> bzrlib/locale/ar/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ar/LC_MESSAGES/bzr.mo po/ar.po
+    Compile: po/si.po -> bzrlib/locale/si/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/si/LC_MESSAGES/bzr.mo po/si.po
+    Compile: po/fr.po -> bzrlib/locale/fr/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/fr/LC_MESSAGES/bzr.mo po/fr.po
+    Compile: po/de.po -> bzrlib/locale/de/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/de/LC_MESSAGES/bzr.mo po/de.po
+    Compile: po/ja.po -> bzrlib/locale/ja/LC_MESSAGES/bzr.mo
+    msgfmt -o bzrlib/locale/ja/LC_MESSAGES/bzr.mo po/ja.po
+    bzr: warning: some compiled extensions could not be loaded; see <https://answers.launchpad.net/bzr/+faq/703>
+    
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/bzr to 775
+  Running setup.py install for charmworldlib
+    
+  Running setup.py install for blessings
+    
+  Running setup.py install for ruamel.yaml
+    author -> Anthon van der Neut
+    author_email -> a.van.der.neut@ruamel.eu
+    classifiers -> ['Development Status :: 4 - Beta', 'Intended Audience :: Developers', 'License :: OSI Approved :: MIT License', 'Operating System :: OS Independent', 'Programming Language :: Python', 'Programming Language :: Python :: 2.6', 'Programming Language :: Python :: 2.7', 'Programming Language :: Python :: 3.3', 'Programming Language :: Python :: 3.4', 'Programming Language :: Python :: 3.5', 'Programming Language :: Python :: Implementation :: CPython', 'Programming Language :: Python :: Implementation :: PyPy', 'Programming Language :: Python :: Implementation :: Jython', 'Topic :: Software Development :: Libraries :: Python Modules', 'Topic :: Text Processing :: Markup']
+    cmdclass -> {'install_lib': <class __main__.MyInstallLib at 0x7f04a1402738>}
+    description -> ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
+    entry_points -> None
+    ext_modules -> [<setuptools.extension.Extension instance at 0x7f049f604fc8>]
+    install_requires -> ['ruamel.base>=1.0.0', 'ruamel.ordereddict']
+    license -> MIT license
+    name -> ruamel.yaml
+    namespace_packages -> ['ruamel']
+    package_data -> {'ruamel.yaml': ['LICENSE']}
+    package_dir -> {'ruamel': '.ruamel', 'ruamel.yaml': '.'}
+    packages -> ['ruamel', 'ruamel.yaml']
+    url -> https://bitbucket.org/ruamel/yaml
+    version -> 0.10.12
+    building '_ruamel_yaml' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/_ruamel_yaml.c -o build/temp.linux-x86_64-2.7/ext/_ruamel_yaml.o
+    In file included from ext/_ruamel_yaml.c:239:0:
+    ext/_ruamel_yaml.h:6:0: warning: "PyUnicode_FromString" redefined [enabled by default]
+     #define PyUnicode_FromString(s) PyUnicode_DecodeUTF8((s), strlen(s), "strict")
+     ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:281:0: note: this is the location of the previous definition
+     # define PyUnicode_FromString PyUnicodeUCS4_FromString
+     ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_pf_12_ruamel_yaml_get_version_string’:
+    ext/_ruamel_yaml.c:1294:17: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+       __pyx_v_value = yaml_get_version_string();
+                     ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_pf_12_ruamel_yaml_7CParser___init__’:
+    ext/_ruamel_yaml.c:2475:5: warning: passing argument 2 of ‘yaml_parser_set_input’ from incompatible pointer type [enabled by default]
+         yaml_parser_set_input((&__pyx_v_self->parser), __pyx_f_12_ruamel_yaml_input_handler, ((void *)__pyx_v_self));
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:1367:1: note: expected ‘int (*)(void *, unsigned char *, size_t,  size_t *)’ but argument is of type ‘int (*)(void *, char *, int,  int *)’
+     yaml_parser_set_input(yaml_parser_t *parser,
+     ^
+    ext/_ruamel_yaml.c:2716:5: warning: pointer targets in passing argument 2 of ‘yaml_parser_set_input_string’ differ in signedness [-Wpointer-sign]
+         yaml_parser_set_input_string((&__pyx_v_self->parser), PyString_AS_STRING(__pyx_v_stream), PyString_GET_SIZE(__pyx_v_stream));
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:1341:1: note: expected ‘const unsigned char *’ but argument is of type ‘char *’
+     yaml_parser_set_input_string(yaml_parser_t *parser,
+     ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__token_to_object’:
+    ext/_ruamel_yaml.c:4482:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 416; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:4482:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 416; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:4494:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.prefix); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 417; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:4494:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag_directive.prefix); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 417; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:5354:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.alias.value); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:5354:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.alias.value); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:5428:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.anchor.value); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:5428:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.anchor.value); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:5502:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:5502:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:5514:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.suffix); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:5514:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_token->data.tag.suffix); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:5626:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_token->data.scalar.value, __pyx_v_token->data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__event_to_object’:
+    ext/_ruamel_yaml.c:7352:9: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:7352:9: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:7364:9: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->prefix); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:7364:9: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+             __pyx_t_4 = PyUnicode_FromString(__pyx_v_tag_directive->prefix); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+             ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:7583:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.alias.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:7583:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.alias.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:7677:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:7677:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:7718:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 593; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:7718:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.scalar.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 593; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:7739:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_4 = PyUnicode_DecodeUTF8(__pyx_v_event->data.scalar.value, __pyx_v_event->data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 594; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:8107:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:8107:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:8148:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:8148:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.sequence_start.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:8377:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 636; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:8377:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.anchor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 636; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:8418:7: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 639; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:8418:7: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+           __pyx_t_4 = PyUnicode_FromString(__pyx_v_event->data.mapping_start.tag); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 639; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+           ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__compose_node’:
+    ext/_ruamel_yaml.c:10046:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.alias.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:10046:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.alias.anchor); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 733; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:10330:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 749; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:10330:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 749; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:10386:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 752; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:10386:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 752; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:10442:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 755; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:10442:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_6 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.anchor); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 755; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__compose_scalar_node’:
+    ext/_ruamel_yaml.c:11064:3: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+       __pyx_t_2 = PyUnicode_DecodeUTF8(__pyx_v_self->parsed_event.data.scalar.value, __pyx_v_self->parsed_event.data.scalar.length, __pyx_k_strict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 790; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+       ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c:11265:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:11265:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.scalar.tag); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 803; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__compose_sequence_node’:
+    ext/_ruamel_yaml.c:11799:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:11799:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.sequence_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 836; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_7CParser__compose_mapping_node’:
+    ext/_ruamel_yaml.c:12396:5: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 875; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:38:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/string.h:399:15: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     extern size_t strlen (const char *__s)
+                   ^
+    ext/_ruamel_yaml.c:12396:5: warning: pointer targets in passing argument 1 of ‘PyUnicodeUCS4_DecodeUTF8’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = PyUnicode_FromString(__pyx_v_self->parsed_event.data.mapping_start.tag); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 875; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+         ^
+    In file included from /usr/include/python2.7/Python.h:85:0,
+                     from ext/_ruamel_yaml.c:4:
+    /usr/include/python2.7/unicodeobject.h:261:31: note: expected ‘const char *’ but argument is of type ‘yaml_char_t *’
+     # define PyUnicode_DecodeUTF8 PyUnicodeUCS4_DecodeUTF8
+                                   ^
+    /usr/include/python2.7/unicodeobject.h:750:23: note: in expansion of macro ‘PyUnicode_DecodeUTF8’
+     PyAPI_FUNC(PyObject*) PyUnicode_DecodeUTF8(
+                           ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_pf_12_ruamel_yaml_8CEmitter___init__’:
+    ext/_ruamel_yaml.c:13603:3: warning: passing argument 2 of ‘yaml_emitter_set_output’ from incompatible pointer type [enabled by default]
+       yaml_emitter_set_output((&__pyx_v_self->emitter), __pyx_f_12_ruamel_yaml_output_handler, ((void *)__pyx_v_self));
+       ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:1829:1: note: expected ‘int (*)(void *, unsigned char *, size_t)’ but argument is of type ‘int (*)(void *, char *, int)’
+     yaml_emitter_set_output(yaml_emitter_t *emitter,
+     ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_8CEmitter__object_to_event’:
+    ext/_ruamel_yaml.c:14981:44: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                                ^
+    ext/_ruamel_yaml.c:15096:44: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+             __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                                ^
+    ext/_ruamel_yaml.c:15433:5: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_alias_event_initialize(__pyx_v_event, __pyx_v_anchor) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:553:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+     ^
+    ext/_ruamel_yaml.c:16148:5: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:16148:5: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:16148:5: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_scalar_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:16582:5: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:16582:5: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_3 = ((yaml_sequence_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:17016:5: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:17016:5: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_mapping_start_event_initialize(__pyx_v_event, __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_pf_12_ruamel_yaml_8CEmitter_12serialize’:
+    ext/_ruamel_yaml.c:18507:42: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+           __pyx_v_tag_directives_end->handle = PyString_AS_STRING(__pyx_v_handle);
+                                              ^
+    ext/_ruamel_yaml.c:18622:42: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+           __pyx_v_tag_directives_end->prefix = PyString_AS_STRING(__pyx_v_prefix);
+                                              ^
+    ext/_ruamel_yaml.c: In function ‘__pyx_f_12_ruamel_yaml_8CEmitter__serialize_node’:
+    ext/_ruamel_yaml.c:19488:5: warning: pointer targets in passing argument 2 of ‘yaml_alias_event_initialize’ differ in signedness [-Wpointer-sign]
+         __pyx_t_2 = ((yaml_alias_event_initialize((&__pyx_v_event), __pyx_v_anchor) == 0) != 0);
+         ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:553:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_alias_event_initialize(yaml_event_t *event, yaml_char_t *anchor);
+     ^
+    ext/_ruamel_yaml.c:20237:7: warning: pointer targets in passing argument 2 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:20237:7: warning: pointer targets in passing argument 3 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:20237:7: warning: pointer targets in passing argument 4 of ‘yaml_scalar_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_scalar_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_value, __pyx_v_length, __pyx_v_plain_implicit, __pyx_v_quoted_implicit, __pyx_v_scalar_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:578:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_scalar_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:20602:7: warning: pointer targets in passing argument 2 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:20602:7: warning: pointer targets in passing argument 3 of ‘yaml_sequence_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_sequence_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_sequence_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:601:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_sequence_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:21110:7: warning: pointer targets in passing argument 2 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    ext/_ruamel_yaml.c:21110:7: warning: pointer targets in passing argument 3 of ‘yaml_mapping_start_event_initialize’ differ in signedness [-Wpointer-sign]
+           __pyx_t_2 = ((yaml_mapping_start_event_initialize((&__pyx_v_event), __pyx_v_anchor, __pyx_v_tag, __pyx_v_implicit, __pyx_v_mapping_style) == 0) != 0);
+           ^
+    In file included from ext/_ruamel_yaml.h:2:0,
+                     from ext/_ruamel_yaml.c:239:
+    ext/yaml.h:633:1: note: expected ‘yaml_char_t *’ but argument is of type ‘char *’
+     yaml_mapping_start_event_initialize(yaml_event_t *event,
+     ^
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/api.c -o build/temp.linux-x86_64-2.7/ext/api.o
+    ext/api.c: In function ‘yaml_document_delete’:
+    ext/api.c:1121:7: warning: variable ‘context’ set but not used [-Wunused-but-set-variable]
+         } context;
+           ^
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/writer.c -o build/temp.linux-x86_64-2.7/ext/writer.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/dumper.c -o build/temp.linux-x86_64-2.7/ext/dumper.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/loader.c -o build/temp.linux-x86_64-2.7/ext/loader.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/reader.c -o build/temp.linux-x86_64-2.7/ext/reader.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/scanner.c -o build/temp.linux-x86_64-2.7/ext/scanner.o
+    ext/scanner.c: In function ‘yaml_parser_decrease_flow_level’:
+    ext/scanner.c:1196:23: warning: variable ‘dummy_key’ set but not used [-Wunused-but-set-variable]
+         yaml_simple_key_t dummy_key;    /* Used to eliminate a compiler warning. */
+                           ^
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/parser.c -o build/temp.linux-x86_64-2.7/ext/parser.o
+    ext/parser.c: In function ‘yaml_parser_parse_block_sequence_entry’:
+    ext/parser.c:762:21: warning: variable ‘dummy_mark’ set but not used [-Wunused-but-set-variable]
+             yaml_mark_t dummy_mark;     /* Used to eliminate a compiler warning. */
+                         ^
+    ext/parser.c: In function ‘yaml_parser_parse_block_mapping_key’:
+    ext/parser.c:872:21: warning: variable ‘dummy_mark’ set but not used [-Wunused-but-set-variable]
+             yaml_mark_t dummy_mark;     /* Used to eliminate a compiler warning. */
+                         ^
+    ext/parser.c: In function ‘yaml_parser_parse_flow_sequence_entry’:
+    ext/parser.c:955:17: warning: variable ‘dummy_mark’ set but not used [-Wunused-but-set-variable]
+         yaml_mark_t dummy_mark;     /* Used to eliminate a compiler warning. */
+                     ^
+    ext/parser.c: In function ‘yaml_parser_parse_flow_mapping_key’:
+    ext/parser.c:1107:17: warning: variable ‘dummy_mark’ set but not used [-Wunused-but-set-variable]
+         yaml_mark_t dummy_mark;     /* Used to eliminate a compiler warning. */
+                     ^
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ext/emitter.c -o build/temp.linux-x86_64-2.7/ext/emitter.o
+    ext/emitter.c: In function ‘yaml_emitter_write_plain_scalar’:
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:1931:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:1931:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c: In function ‘yaml_emitter_write_single_quoted_scalar’:
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:1992:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:1992:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c: In function ‘yaml_emitter_write_literal_scalar’:
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:2255:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:2255:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c: In function ‘yaml_emitter_write_folded_scalar’:
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:2304:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    ext/emitter.c:28:6: warning: value computed is not used [-Wunused-value]
+          && ((emitter->line_break == YAML_CR_BREAK ?                                \
+          ^
+    ext/emitter.c:56:11: note: in expansion of macro ‘PUT_BREAK’
+              (PUT_BREAK(emitter),                                                   \
+               ^
+    ext/emitter.c:2304:18: note: in expansion of macro ‘WRITE_BREAK’
+                 if (!WRITE_BREAK(emitter, string)) return 0;
+                      ^
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/ext/_ruamel_yaml.o build/temp.linux-x86_64-2.7/ext/api.o build/temp.linux-x86_64-2.7/ext/writer.o build/temp.linux-x86_64-2.7/ext/dumper.o build/temp.linux-x86_64-2.7/ext/loader.o build/temp.linux-x86_64-2.7/ext/reader.o build/temp.linux-x86_64-2.7/ext/scanner.o build/temp.linux-x86_64-2.7/ext/parser.o build/temp.linux-x86_64-2.7/ext/emitter.o -o build/lib.linux-x86_64-2.7/_ruamel_yaml.so
+    Skipping installation of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/ruamel/__init__.py (namespace package)
+    
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/ruamel.yaml-0.10.12-py2.7-nspkg.pth
+  Running setup.py install for pathspec
+    
+  Running setup.py install for jujubundlelib
+    
+    warning: no previously-included files matching '__pycache__' found under directory '*'
+    warning: no previously-included files matching '*.py[co]' found under directory '*'
+    changing mode of build/scripts-2.7/getchangeset from 664 to 775
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/getchangeset to 775
+  Running setup.py install for colander
+    
+  Running setup.py install for python-mimeparse
+    
+  Running setup.py install for extras
+    
+  Running setup.py install for httplib2
+    
+  Running setup.py install for keyring
+    your setuptools is too old (<12)
+    setuptools_scm functionality is degraded
+    
+    Installing keyring script to /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin
+  Running setup.py install for lazr.restfulclient
+    
+    Skipping installation of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr/__init__.py (namespace package)
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr.restfulclient-0.13.1-py2.7-nspkg.pth
+  Running setup.py install for lazr.uri
+    
+    Skipping installation of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr/__init__.py (namespace package)
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr.uri-1.0.3-py2.7-nspkg.pth
+  Running setup.py install for oauth
+    
+  Running setup.py install for wadllib
+    
+  Running setup.py install for Markdown
+    changing mode of build/scripts-2.7/markdown_py from 664 to 775
+    Converting docs/release-2.0.1.txt -> build/docs/release-2.0.1.html
+    Converting docs/release-2.5.txt -> build/docs/release-2.5.html
+    Converting docs/authors.txt -> build/docs/authors.html
+    Converting docs/release-2.2.1.txt -> build/docs/release-2.2.1.html
+    Converting docs/release-2.1.1.txt -> build/docs/release-2.1.1.html
+    Converting docs/release-2.1.0.txt -> build/docs/release-2.1.0.html
+    Converting docs/install.txt -> build/docs/install.html
+    Converting docs/release-2.3.txt -> build/docs/release-2.3.html
+    Converting docs/index.txt -> build/docs/index.html
+    Converting docs/release-2.0.2.txt -> build/docs/release-2.0.2.html
+    Converting docs/release-2.4.txt -> build/docs/release-2.4.html
+    Converting docs/siteindex.txt -> build/docs/siteindex.html
+    Converting docs/release-2.2.0.txt -> build/docs/release-2.2.0.html
+    Converting docs/release-2.0.txt -> build/docs/release-2.0.html
+    Converting docs/release-2.6.txt -> build/docs/release-2.6.html
+    Converting docs/change_log.txt -> build/docs/change_log.html
+    Converting docs/cli.txt -> build/docs/cli.html
+    Converting docs/test_suite.txt -> build/docs/test_suite.html
+    Converting docs/reference.txt -> build/docs/reference.html
+    Converting docs/extensions/abbreviations.txt -> build/docs/extensions/abbreviations.html
+    Converting docs/extensions/footnotes.txt -> build/docs/extensions/footnotes.html
+    Converting docs/extensions/sane_lists.txt -> build/docs/extensions/sane_lists.html
+    Converting docs/extensions/extra.txt -> build/docs/extensions/extra.html
+    Converting docs/extensions/smart_strong.txt -> build/docs/extensions/smart_strong.html
+    Converting docs/extensions/tables.txt -> build/docs/extensions/tables.html
+    Converting docs/extensions/definition_lists.txt -> build/docs/extensions/definition_lists.html
+    Converting docs/extensions/toc.txt -> build/docs/extensions/toc.html
+    Converting docs/extensions/nl2br.txt -> build/docs/extensions/nl2br.html
+    Converting docs/extensions/wikilinks.txt -> build/docs/extensions/wikilinks.html
+    Converting docs/extensions/index.txt -> build/docs/extensions/index.html
+    Converting docs/extensions/fenced_code_blocks.txt -> build/docs/extensions/fenced_code_blocks.html
+    Converting docs/extensions/code_hilite.txt -> build/docs/extensions/code_hilite.html
+    Converting docs/extensions/header_id.txt -> build/docs/extensions/header_id.html
+    Converting docs/extensions/api.txt -> build/docs/extensions/api.html
+    Converting docs/extensions/admonition.txt -> build/docs/extensions/admonition.html
+    Converting docs/extensions/smarty.txt -> build/docs/extensions/smarty.html
+    Converting docs/extensions/attr_list.txt -> build/docs/extensions/attr_list.html
+    Converting docs/extensions/meta_data.txt -> build/docs/extensions/meta_data.html
+    
+    changing mode of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/bin/markdown_py to 775
+  Running setup.py install for ruamel.ordereddict
+    building '_ordereddict' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c ordereddict.c -o build/temp.linux-x86_64-2.7/ordereddict.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/ordereddict.o -o build/lib.linux-x86_64-2.7/_ordereddict.so
+    
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/ruamel.ordereddict-0.4.9-py2.7-nspkg.pth
+Compiling /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/linecache2/linecache2/tests/inspect_fodder2.py ...
+  File "/home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/build/linecache2/linecache2/tests/inspect_fodder2.py", line 102
+    def keyworded(*arg1, arg2=1):
+                            ^
+SyntaxError: invalid syntax
+
+  Running setup.py install for lazr.authentication
+    
+    Skipping installation of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr/__init__.py (namespace package)
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/lazr.authentication-0.1.3-py2.7-nspkg.pth
+  Running setup.py install for wsgi-intercept
+    
+  Running setup.py install for zope.interface
+    
+    warning: no previously-included files matching '*.dll' found anywhere in distribution
+    warning: no previously-included files matching '*.pyc' found anywhere in distribution
+    warning: no previously-included files matching '*.pyo' found anywhere in distribution
+    warning: no previously-included files matching '*.so' found anywhere in distribution
+    warning: no previously-included files matching 'coverage.xml' found anywhere in distribution
+    no previously-included directories found matching 'docs/_build'
+    building 'zope.interface._zope_interface_coptimizations' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c src/zope/interface/_zope_interface_coptimizations.c -o build/temp.linux-x86_64-2.7/src/zope/interface/_zope_interface_coptimizations.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/zope/interface/_zope_interface_coptimizations.o -o build/lib.linux-x86_64-2.7/zope/interface/_zope_interface_coptimizations.so
+    Skipping installation of /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/zope/__init__.py (namespace package)
+    Installing /home/ubuntu/features/layers/openstack-charm-layer-dev/interfaces/keystone/.tox/lint/lib/python2.7/site-packages/zope.interface-4.1.3-py2.7-nspkg.pth
+Successfully installed flake8 os-testr charm-tools mccabe pep8 pyflakes testrepository testtools Babel pbr python-subunit launchpadlib cheetah pyyaml pycrypto paramiko bzr requests charmworldlib blessings ruamel.yaml pathspec otherstuf path.py jujubundlelib virtualenv colander fixtures python-mimeparse extras traceback2 unittest2 pytz httplib2 keyring lazr.restfulclient lazr.uri oauth testresources wadllib Markdown ecdsa ruamel.base ruamel.ordereddict stuf translationstring iso8601 six linecache2 lazr.authentication wsgi-intercept parse zope.interface
+Cleaning up...

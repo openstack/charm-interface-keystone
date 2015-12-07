@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: jujubundlelib
+Version: 0.4.1
+Summary: A python library for working with Juju bundles
+Home-page: https://github.com/juju/juju-bundlelib
+Author: Juju UI Team
+Author-email: juju-gui@lists.ubuntu.com
+License: LGPL3
+Description: ===============
+        Juju Bundle Lib
+        ===============
+        
+        A Python library for working with Juju bundles.
+        
+Keywords: juju bundles
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
