@@ -23,8 +23,8 @@ class KeystoneRequires(RelationBase):
     # with a basic documentation string provided.
     auto_accessors = ['private-address', 'service_host', 'service_protocol',
                       'service_port', 'service_tenant', 'service_username',
-                      'service_password', 'auth_host', 'auth_protocol',
-                      'auth_port', 'admin_tenant_id']
+                      'service_password', 'service_tenant_id', 'auth_host',
+                      'auth_protocol', 'auth_port']
 
     @hook('{requires:keystone}-relation-joined')
     def joined(self):
@@ -54,14 +54,16 @@ class KeystoneRequires(RelationBase):
                 return False
         return True
 
-    def register_endpoints(self, public_url, internal_url, admin_url):
+    def register_endpoints(self, service, region, public_url, internal_url, admin_url):
         """
         Register this service with keystone
         """
         relation_info = {
+            'service': service,
             'public_url': public_url,
             'internal_url': internal_url,
             'admin_url': admin_url,
+            'region': region,
         }
         self.set_local(**relation_info)
         self.set_remote(**relation_info)
