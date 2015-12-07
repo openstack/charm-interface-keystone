@@ -35,8 +35,6 @@ class KeystoneRequires(RelationBase):
             self.set_state('{relation_name}.available')
         else:
             self.remove_state('{relation_name}.available')
-        if not self.keystone_hosts():
-            self.remove_state('{relation_name}.connected')
 
     @hook('{requires:keystone}-relation-changed')
     def changed(self):
@@ -51,7 +49,8 @@ class KeystoneRequires(RelationBase):
         Get the connection string, if available, or None.
         """
         for field in self.auto_accessors:
-            if not self.get(field):
+            attr_method = getattr(self, field.replace('-', '_'))
+            if not attr_method():
                 return False
         return True
 
