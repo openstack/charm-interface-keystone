@@ -37,25 +37,26 @@ class KeystoneRequires(RelationBase):
         self.update_state()
 
     def update_state(self):
-        if self.base_data_complete():
-            self.set_state('{relation_name}.available')
-            if self.ssl_data_complete():
-                self.set_state('{relation_name}.available.ssl')
+        """Update the states of the relations based on the data that the
+        relation has.
+
+        If the :meth:`base_data_complete` is False then all of the states
+        are removed.  Otherwise, the individual states are set according to
+        their own data methods.
+        """
+        base_complete = self.base_data_complete()
+        states = {
+            '{relation_name}.available': True,
+            '{relation_name}.available.ssl': self.ssl_data_complete(),
+            '{relation_name}.available.ssl_legacy':
+                self.ssl_data_complete_legacy(),
+            '{relation_name}.available.auth': self.auth_data_complete()
+        }
+        for k, v in states.items():
+            if base_complete and v:
+                self.set_state(k)
             else:
-                self.remove_state('{relation_name}.available.ssl')
-            if self.ssl_data_complete_legacy():
-                self.set_state('{relation_name}.available.ssl_legacy')
-            else:
-                self.remove_state('{relation_name}.available.ssl_legacy')
-            if self.auth_data_complete():
-                self.set_state('{relation_name}.available.auth')
-            else:
-                self.remove_state('{relation_name}.available.auth')
-        else:
-            self.remove_state('{relation_name}.available')
-            self.remove_state('{relation_name}.available.ssl')
-            self.remove_state('{relation_name}.available.ssl_legacy')
-            self.remove_state('{relation_name}.available.auth')
+                self.remove_state(k)
 
     @hook('{requires:keystone}-relation-changed')
     def changed(self):
