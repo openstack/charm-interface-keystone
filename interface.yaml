@@ -1,3 +1,12 @@
 name: keystone
 summary: Interface for integrating with Keystone identity service
 maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
+ignore:
+  - 'unit_tests'
+  - 'Makefile'
+  - '.testr.conf'
+  - 'test-requirements.txt'
+  - 'tox.ini'
+  - '.gitignore'
+  - '.gitreview'
+  - '.unit-state.db'
