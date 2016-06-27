@@ -11,6 +11,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import base64
+
 from charms.reactive import RelationBase
 from charms.reactive import hook
 from charms.reactive import scopes
@@ -133,3 +135,23 @@ class KeystoneRequires(RelationBase):
 
     def request_keystone_endpoint_information(self):
         self.register_endpoints('None', 'None', 'None', 'None', 'None')
+
+    def get_ssl_key(self, cn=None):
+        relation_key = 'ssl_key_{}'.format(cn) if cn else 'ssl_key'
+        key = self.get_remote(relation_key)
+        if key:
+            key = base64.b64decode(key).decode('utf-8')
+        return key
+
+    def get_ssl_cert(self, cn=None):
+        relation_key = 'ssl_cert_{}'.format(cn) if cn else 'ssl_cert'
+        cert = self.get_remote(relation_key)
+        if cert:
+            cert = base64.b64decode(cert).decode('utf-8')
+        return cert
+
+    def get_ssl_ca(self, cn=None):
+        ca = None
+        if self.ca_cert():
+            ca = base64.b64decode(self.ca_cert()).decode('utf-8')
+        return ca
