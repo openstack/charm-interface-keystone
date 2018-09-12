@@ -31,7 +31,7 @@ class KeystoneRequires(RelationBase):
                       'ca_cert', 'ssl_cert', 'https_keystone',
                       'ssl_cert_admin', 'ssl_cert_internal',
                       'ssl_cert_public', 'ssl_key_admin', 'ssl_key_internal',
-                      'ssl_key_public', 'api_version']
+                      'ssl_key_public', 'api_version', 'service_domain']
 
     @hook('{requires:keystone}-relation-joined')
     def joined(self):
