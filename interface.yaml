@@ -1,6 +1,6 @@
 name: keystone
 summary: Interface for integrating with Keystone identity service
-maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
+maintainer: OpenStack Charmers <openstack-discuss@lists.openstack.org>
 ignore:
   - 'unit_tests'
   - 'Makefile'
