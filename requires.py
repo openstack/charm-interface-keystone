@@ -119,7 +119,7 @@ class KeystoneRequires(RelationBase):
         return True
 
     def register_endpoints(self, service, region, public_url, internal_url,
-                           admin_url):
+                           admin_url, requested_roles=None):
         """
         Register this service with keystone
         """
@@ -130,6 +130,9 @@ class KeystoneRequires(RelationBase):
             'admin_url': admin_url,
             'region': region,
         }
+        if requested_roles:
+            relation_info.update(
+                {'requested_roles': ','.join(requested_roles)})
         self.set_local(**relation_info)
         self.set_remote(**relation_info)
 

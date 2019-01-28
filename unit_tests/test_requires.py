@@ -224,6 +224,22 @@ class TestKeystoneRequires(unittest.TestCase):
         self.set_local.assert_called_once_with(**result)
         self.set_remote.assert_called_once_with(**result)
 
+    def test_register_endpoints_requested_roles(self):
+        self.patch_kr('set_local')
+        self.patch_kr('set_remote')
+        self.kr.register_endpoints('s', 'r', 'p_url', 'i_url', 'a_url',
+                                   requested_roles=['role1', 'role2'])
+        result = {
+            'service': 's',
+            'public_url': 'p_url',
+            'internal_url': 'i_url',
+            'admin_url': 'a_url',
+            'region': 'r',
+            'requested_roles': 'role1,role2',
+        }
+        self.set_local.assert_called_once_with(**result)
+        self.set_remote.assert_called_once_with(**result)
+
     def test_request_keystone_endpoint_information(self):
         self.patch_kr('set_local')
         self.patch_kr('set_remote')
