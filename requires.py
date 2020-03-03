@@ -12,6 +12,7 @@
 # limitations under the License.
 
 import base64
+import json
 
 from charms.reactive import RelationBase
 from charms.reactive import hook
@@ -32,7 +33,7 @@ class KeystoneRequires(RelationBase):
                       'ssl_cert_admin', 'ssl_cert_internal',
                       'ssl_cert_public', 'ssl_key_admin', 'ssl_key_internal',
                       'ssl_key_public', 'api_version', 'service_domain',
-                      'service_domain_id']
+                      'service_domain_id', 'ep_changed']
 
     @hook('{requires:keystone}-relation-joined')
     def joined(self):
@@ -140,6 +141,18 @@ class KeystoneRequires(RelationBase):
     def request_keystone_endpoint_information(self):
         self.register_endpoints('None', 'None', 'None', 'None', 'None')
 
+    def request_notification(self, services):
+        """
+        Request notification about changes to endpoints
+
+        :param services: services to request notification about
+        :type: list[str]
+        """
+        relation_info = {
+            "subscribe_ep_change": " ".join(services),
+        }
+        self.set_remote(**relation_info)
+
     def get_ssl_key(self, cn=None):
         relation_key = 'ssl_key_{}'.format(cn) if cn else 'ssl_key'
         key = self.get_remote(relation_key)
@@ -159,3 +172,13 @@ class KeystoneRequires(RelationBase):
         if self.ca_cert():
             ca = base64.b64decode(self.ca_cert()).decode('utf-8')
         return ca
+
+    def endpoint_checksums(self):
+        """Read any endpoint notification checksums from the interface
+
+        :returns: endpoint->checksum data dictionary
+        :rtype: dict
+        """
+        if self.ep_changed():
+            return json.loads(self.ep_changed())
+        return {}

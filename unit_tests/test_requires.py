@@ -253,3 +253,22 @@ class TestKeystoneRequires(unittest.TestCase):
         self.kr.request_keystone_endpoint_information()
         self.set_local.assert_called_once_with(**result)
         self.set_remote.assert_called_once_with(**result)
+
+    def test_request_notification(self):
+        self.patch_kr('set_remote')
+        result = {
+            'subscribe_ep_change': 'nova neutron'
+        }
+        self.kr.request_notification(['nova', 'neutron'])
+        self.set_remote.assert_called_once_with(**result)
+
+    def test_endpoint_checksums(self):
+        self.patch_kr('ep_changed')
+        self.kr.ep_changed.return_value = (
+            '{"nova": "abxcxv", "neutron": "124252"}'
+        )
+        result = {
+            'nova': 'abxcxv',
+            'neutron': '124252',
+        }
+        self.assertEqual(self.kr.endpoint_checksums(), result)
