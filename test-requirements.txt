@@ -2,5 +2,4 @@
 flake8
 stestr>=2.2.0
 charms.reactive
-mock>=1.2
 coverage>=3.6
