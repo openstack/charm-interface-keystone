@@ -44,6 +44,7 @@ class KeystoneRequires(RelationBase):
     def update_state(self):
         if self.base_data_complete():
             self.set_state('{relation_name}.available')
+            self.set_state('{relation_name}.available.auth')
             if self.ssl_data_complete():
                 self.set_state('{relation_name}.available.ssl')
             else:
@@ -52,10 +53,6 @@ class KeystoneRequires(RelationBase):
                 self.set_state('{relation_name}.available.ssl_legacy')
             else:
                 self.remove_state('{relation_name}.available.ssl_legacy')
-            if self.auth_data_complete():
-                self.set_state('{relation_name}.available.auth')
-            else:
-                self.remove_state('{relation_name}.available.auth')
         else:
             self.remove_state('{relation_name}.available')
             self.remove_state('{relation_name}.available.ssl')
@@ -79,13 +76,6 @@ class KeystoneRequires(RelationBase):
             'auth_host': self.auth_host(),
             'auth_protocol': self.auth_protocol(),
             'auth_port': self.auth_port(),
-        }
-        if all(data.values()):
-            return True
-        return False
-
-    def auth_data_complete(self):
-        data = {
             'service_tenant': self.service_tenant(),
             'service_username': self.service_username(),
             'service_password': self.service_password(),

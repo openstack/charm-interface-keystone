@@ -115,18 +115,13 @@ class TestKeystoneRequires(unittest.TestCase):
         self.patch_kr('auth_host', '5')
         self.patch_kr('auth_protocol', '6')
         self.patch_kr('auth_port', '7')
-        assert self.kr.base_data_complete() is True
-        self.auth_port.return_value = None
-        assert self.kr.base_data_complete() is False
-
-    def test_auth_data_complete(self):
         self.patch_kr('service_tenant', '1')
         self.patch_kr('service_username', '2')
         self.patch_kr('service_password', '3')
         self.patch_kr('service_tenant_id', '4')
-        assert self.kr.auth_data_complete() is True
+        assert self.kr.base_data_complete() is True
         self.service_tenant.return_value = None
-        assert self.kr.auth_data_complete() is False
+        assert self.kr.base_data_complete() is False
 
     def test_ssl_data_complete(self):
         self.patch_kr('ssl_cert_admin', '1')
@@ -158,7 +153,6 @@ class TestKeystoneRequires(unittest.TestCase):
         self.patch_kr('base_data_complete', False)
         self.patch_kr('ssl_data_complete', False)
         self.patch_kr('ssl_data_complete_legacy', False)
-        self.patch_kr('auth_data_complete', False)
         self.patch_kr('set_state')
         self.patch_kr('remove_state')
         # test when not all base data is available.
@@ -173,11 +167,11 @@ class TestKeystoneRequires(unittest.TestCase):
         # test when just the base data is available.
         self.base_data_complete.return_value = True
         self.kr.update_state()
-        self.set_state.assert_called_once_with('{relation_name}.available')
+        self.set_state.assert_any_call('{relation_name}.available')
+        self.set_state.assert_any_call('{relation_name}.available.auth')
         self.remove_state.assert_any_call('{relation_name}.available.ssl')
         self.remove_state.assert_any_call(
             '{relation_name}.available.ssl_legacy')
-        self.remove_state.assert_any_call('{relation_name}.available.auth')
         self.set_state.reset_mock()
         self.remove_state.reset_mock()
         # test ssl_data_complete
@@ -187,7 +181,6 @@ class TestKeystoneRequires(unittest.TestCase):
         self.set_state.assert_any_call('{relation_name}.available.ssl')
         self.remove_state.assert_any_call(
             '{relation_name}.available.ssl_legacy')
-        self.remove_state.assert_any_call('{relation_name}.available.auth')
         self.set_state.reset_mock()
         self.remove_state.reset_mock()
         # test ssl_data_complete_legacy
@@ -197,11 +190,8 @@ class TestKeystoneRequires(unittest.TestCase):
         self.set_state.assert_any_call('{relation_name}.available.ssl')
         self.set_state.assert_any_call(
             '{relation_name}.available.ssl_legacy')
-        self.remove_state.assert_any_call('{relation_name}.available.auth')
         self.set_state.reset_mock()
         self.remove_state.reset_mock()
-        # test auth_data_complete()
-        self.auth_data_complete.return_value = True
         self.kr.update_state()
         self.set_state.assert_any_call('{relation_name}.available')
         self.set_state.assert_any_call('{relation_name}.available.ssl')
