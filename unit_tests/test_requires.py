@@ -119,6 +119,7 @@ class TestKeystoneRequires(unittest.TestCase):
         self.patch_kr('service_username', '2')
         self.patch_kr('service_password', '3')
         self.patch_kr('service_tenant_id', '4')
+        self.patch_kr('service_type', 'identity')
         assert self.kr.base_data_complete() is True
         self.service_tenant.return_value = None
         assert self.kr.base_data_complete() is False
