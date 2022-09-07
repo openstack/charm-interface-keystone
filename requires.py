@@ -14,18 +14,37 @@
 import base64
 import json
 
-from charms.reactive import RelationBase
-from charms.reactive import hook
-from charms.reactive import scopes
+import charms.reactive as reactive
 
 
-class KeystoneRequires(RelationBase):
-    scope = scopes.GLOBAL
+# NOTE: fork of relations.AutoAccessors for forwards compat behaviour
+class KeystoneAutoAccessors(type):
+    """
+    Metaclass that converts fields referenced by ``auto_accessors`` into
+    accessor methods with very basic doc strings.
+    """
+    def __new__(cls, name, parents, dct):
+        for field in dct.get('auto_accessors', []):
+            meth_name = field.replace('-', '_')
+            meth = cls._accessor(field)
+            meth.__name__ = meth_name
+            meth.__module__ = dct.get('__module__')
+            meth.__doc__ = 'Get the %s, if available, or None.' % field
+            dct[meth_name] = meth
+        return super(KeystoneAutoAccessors, cls).__new__(
+            cls, name, parents, dct
+        )
 
-    # These remote data fields will be automatically mapped to accessors
-    # with a basic documentation string provided.
+    @staticmethod
+    def _accessor(field):
+        def __accessor(self):
+            return self.all_joined_units.received.get(field)
+        return __accessor
 
-    auto_accessors = ['private-address', 'service_host', 'service_protocol',
+
+class KeystoneRequires(reactive.Endpoint, metaclass=KeystoneAutoAccessors):
+
+    auto_accessors = ['service_host', 'service_protocol',
                       'service_port', 'service_tenant', 'service_username',
                       'service_password', 'service_tenant_id', 'auth_host',
                       'auth_protocol', 'auth_port', 'admin_token', 'ssl_key',
@@ -37,40 +56,53 @@ class KeystoneRequires(RelationBase):
                       'admin_domain_id', 'admin_user_id', 'admin_project_id',
                       'service_type']
 
-    @hook('{requires:keystone}-relation-joined')
+    @reactive.when('endpoint.{endpoint_name}.joined')
     def joined(self):
-        self.set_state('{relation_name}.connected')
-        self.update_state()
+        reactive.set_flag(self.expand_name('{endpoint_name}.connected'))
 
-    def update_state(self):
-        if self.base_data_complete():
-            self.set_state('{relation_name}.available')
-            self.set_state('{relation_name}.available.auth')
-            if self.ssl_data_complete():
-                self.set_state('{relation_name}.available.ssl')
-            else:
-                self.remove_state('{relation_name}.available.ssl')
-            if self.ssl_data_complete_legacy():
-                self.set_state('{relation_name}.available.ssl_legacy')
-            else:
-                self.remove_state('{relation_name}.available.ssl_legacy')
-        else:
-            self.remove_state('{relation_name}.available')
-            self.remove_state('{relation_name}.available.ssl')
-            self.remove_state('{relation_name}.available.ssl_legacy')
-            self.remove_state('{relation_name}.available.auth')
-
-    @hook('{requires:keystone}-relation-changed')
+    @reactive.when('endpoint.{endpoint_name}.changed')
     def changed(self):
-        self.update_state()
+        self.update_flags()
+        reactive.clear_flag(
+            self.expand_name(
+                'endpoint.{endpoint_name}.changed'))
 
-    @hook('{requires:keystone}-relation-{broken,departed}')
+    def update_flags(self):
+        if self.base_data_complete():
+            reactive.set_flag(self.expand_name('{endpoint_name}.available'))
+            reactive.set_flag(
+                self.expand_name('{endpoint_name}.available.auth'))
+            if self.ssl_data_complete():
+                reactive.set_flag(
+                    self.expand_name('{endpoint_name}.available.ssl'))
+            else:
+                reactive.clear_flag(
+                    self.expand_name('{endpoint_name}.available.ssl'))
+            if self.ssl_data_complete_legacy():
+                reactive.set_flag(
+                    self.expand_name('{endpoint_name}.available.ssl_legacy'))
+            else:
+                reactive.clear_flag(
+                    self.expand_name('{endpoint_name}.available.ssl_legacy'))
+        else:
+            reactive.clear_flag(
+                self.expand_name('{endpoint_name}.available'))
+            reactive.clear_flag(
+                self.expand_name('{endpoint_name}.available.ssl'))
+            reactive.clear_flag(
+                self.expand_name('{endpoint_name}.available.ssl_legacy'))
+            reactive.clear_flag(
+                self.expand_name('{endpoint_name}.available.auth'))
+
+    @reactive.when('endpoint.{endpoint_name}.departed')
     def departed(self):
-        self.update_state()
+        self.update_flags()
+        reactive.clear_flag(
+            self.expand_name(
+                'endpoint.{endpoint_name}.departed'))
 
     def base_data_complete(self):
         data = {
-            'private-address': self.private_address(),
             'service_host': self.service_host(),
             'service_protocol': self.service_protocol(),
             'service_port': self.service_port(),
@@ -131,8 +163,8 @@ class KeystoneRequires(RelationBase):
         if add_role_to_admin:
             relation_info.update(
                 {'add_role_to_admin': ','.join(add_role_to_admin)})
-        self.set_local(**relation_info)
-        self.set_remote(**relation_info)
+        for relation in self.relations:
+            relation.to_publish_raw.update(relation_info)
 
     def request_keystone_endpoint_information(self):
         self.register_endpoints('None', 'None', 'None', 'None', 'None')
@@ -147,18 +179,19 @@ class KeystoneRequires(RelationBase):
         relation_info = {
             "subscribe_ep_change": " ".join(services),
         }
-        self.set_remote(**relation_info)
+        for relation in self.relations:
+            relation.to_publish_raw.update(relation_info)
 
     def get_ssl_key(self, cn=None):
         relation_key = 'ssl_key_{}'.format(cn) if cn else 'ssl_key'
-        key = self.get_remote(relation_key)
+        key = self.all_joined_units.received.get(relation_key)
         if key:
             key = base64.b64decode(key).decode('utf-8')
         return key
 
     def get_ssl_cert(self, cn=None):
         relation_key = 'ssl_cert_{}'.format(cn) if cn else 'ssl_cert'
-        cert = self.get_remote(relation_key)
+        cert = self.all_joined_units.received.get(relation_key)
         if cert:
             cert = base64.b64decode(cert).decode('utf-8')
         return cert
