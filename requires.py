@@ -23,6 +23,7 @@ class KeystoneAutoAccessors(type):
     Metaclass that converts fields referenced by ``auto_accessors`` into
     accessor methods with very basic doc strings.
     """
+
     def __new__(cls, name, parents, dct):
         for field in dct.get('auto_accessors', []):
             meth_name = field.replace('-', '_')
@@ -37,24 +38,64 @@ class KeystoneAutoAccessors(type):
 
     @staticmethod
     def _accessor(field):
-        def __accessor(self):
-            return self.all_joined_units.received.get(field)
-        return __accessor
+        def _accessor_internal(self):
+            # Use remapped or transposed key for application
+            # data bag lookup for forwards compat
+            app_field = self._forward_compat_remaps.get(
+                field,
+                field.replace('_', '-')
+            )
+            return self.relations[0].received_app_raw.get(
+                app_field,
+                self.all_joined_units.received.get(field)
+            )
+        return _accessor_internal
 
 
 class KeystoneRequires(reactive.Endpoint, metaclass=KeystoneAutoAccessors):
 
-    auto_accessors = ['service_host', 'service_protocol',
-                      'service_port', 'service_tenant', 'service_username',
-                      'service_password', 'service_tenant_id', 'auth_host',
-                      'auth_protocol', 'auth_port', 'admin_token', 'ssl_key',
-                      'ca_cert', 'ssl_cert', 'https_keystone',
-                      'ssl_cert_admin', 'ssl_cert_internal',
-                      'ssl_cert_public', 'ssl_key_admin', 'ssl_key_internal',
-                      'ssl_key_public', 'api_version', 'service_domain',
-                      'service_domain_id', 'ep_changed',
-                      'admin_domain_id', 'admin_user_id', 'admin_project_id',
-                      'service_type']
+    auto_accessors = [
+        'service_host',
+        'service_protocol',
+        'service_port',
+        'service_tenant',
+        'service_username',
+        'service_password',
+        'service_tenant_id',
+        'auth_host',
+        'auth_protocol',
+        'auth_port',
+        'admin_token',
+        'ssl_key',
+        'ca_cert',
+        'ssl_cert',
+        'https_keystone',
+        'ssl_cert_admin',
+        'ssl_cert_internal',
+        'ssl_cert_public',
+        'ssl_key_admin',
+        'ssl_key_internal',
+        'ssl_key_public',
+        'api_version',
+        'service_domain',
+        'service_domain_id',
+        'ep_changed',
+        'admin_domain_id',
+        'admin_user_id',
+        'admin_project_id',
+        'service_type',
+        'public-auth-url',
+        'internal-auth-url',
+        'admin-auth-url',
+    ]
+
+    _forward_compat_remaps = {
+        'admin_user': 'admin-user-name',
+        'service_username': 'service-user-name',
+        'service_tenant': 'service-project-name',
+        'service_tenant_id': 'service-project-id',
+        'service_domain': 'service-domain-name',
+    }
 
     @reactive.when('endpoint.{endpoint_name}.joined')
     def joined(self):
@@ -146,7 +187,9 @@ class KeystoneRequires(reactive.Endpoint, metaclass=KeystoneAutoAccessors):
 
     def register_endpoints(self, service, region, public_url, internal_url,
                            admin_url, requested_roles=None,
-                           add_role_to_admin=None):
+                           add_role_to_admin=None,
+                           service_type=None,
+                           service_description=None):
         """
         Register this service with keystone
         """
@@ -165,6 +208,26 @@ class KeystoneRequires(reactive.Endpoint, metaclass=KeystoneAutoAccessors):
                 {'add_role_to_admin': ','.join(add_role_to_admin)})
         for relation in self.relations:
             relation.to_publish_raw.update(relation_info)
+
+        # NOTE: forwards compatible data presentation for keystone-k8s
+        if all((service_type,
+                service_description,
+                reactive.is_flag_set('leadership.is_leader'),)):
+            application_info = {
+                'region': region,
+                'service-endpoints': json.dumps([
+                    {
+                        'service_name': service,
+                        'type': service_type,
+                        'description': service_description,
+                        'internal_url': internal_url,
+                        'admin_url': admin_url,
+                        'public_url': public_url,
+                    }
+                ], sort_keys=True)
+            }
+            for relation in self.relations:
+                relation.to_publish_app_raw.update(application_info)
 
     def request_keystone_endpoint_information(self):
         self.register_endpoints('None', 'None', 'None', 'None', 'None')

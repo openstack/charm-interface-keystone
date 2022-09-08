@@ -10,6 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import json
 
 from unittest import mock
 
@@ -18,6 +19,35 @@ import requires
 import charms_openstack.test_utils as test_utils
 
 _hook_args = {}
+
+IDENTITY_APP_DATA = {
+    'api-version': '3',
+    'auth-host': 'authhost',
+    'auth-port': '5000',
+    'auth-protocol': 'http',
+    'internal-host': 'internalhost',
+    'internal-port': '5000',
+    'internal-protocol': 'http',
+    'service-host': 'servicehost',
+    'service-port': '5000',
+    'service-protocol': 'http',
+    'admin-domain-name': 'admin-domain',
+    'admin-domain-id': 'ca9e66dd-920c-493c-8ebd-dcc893afcc3b',
+    'admin-project-name': 'admin',
+    'admin-project-id': '5c9fd12c-87eb-4688-931a-05da83db14ad',
+    'admin-user-name': 'admin',
+    'admin-user-id': 'cc28fa26-70bc-4acb-97a4-5614799257bb',
+    'service-domain-name': 'service-domain',
+    'service-domain-id': '8fa8e4c1-b9f6-44ae-b646-0626d44786c2',
+    'service-project-name': 'services',
+    'service-project-id': '0626e4d8-0846-4fd5-98c9-324fbbe24301',
+    'service-user-name': 'gnocchi',
+    'service-user-id': 'fa8c4a9a-f97c-41e7-a204-73571c5a7b51',
+    'service-password': 'foobar',
+    'internal-auth-url': 'http://internalhost:80/keystone',
+    'admin-auth-url': 'http://adminhost:80/keystone',
+    'public-auth-url': 'http://publichost:80/keystone',
+}
 
 
 class TestKeystoneRequires(test_utils.PatchHelper):
@@ -72,6 +102,25 @@ class TestKeystoneRequires(test_utils.PatchHelper):
         assert self.target.base_data_complete() is True
         self.service_tenant.return_value = None
         assert self.target.base_data_complete() is False
+
+    def test_app_data_complete(self):
+        relation = mock.MagicMock()
+        relation.received_app_raw.get.side_effect = (
+            lambda k, d: IDENTITY_APP_DATA.get(k, d)
+        )
+        self.target._relations = [relation]
+        self.assertEqual(self.target.service_host(), 'servicehost')
+        self.assertEqual(self.target.auth_host(), 'authhost')
+        self.assertEqual(
+            self.target.public_auth_url(), 'http://publichost:80/keystone')
+        self.assertEqual(self.target.service_tenant(), 'services')
+        self.assertEqual(self.target.service_password(), 'foobar')
+        self.assertEqual(
+            self.target.service_tenant_id(),
+            '0626e4d8-0846-4fd5-98c9-324fbbe24301')
+        self.assertTrue(self.target.base_data_complete())
+        self.assertFalse(self.target.ssl_data_complete())
+        self.assertFalse(self.target.ssl_data_complete_legacy())
 
     def test_ssl_data_complete(self):
         self.patch_target('ssl_cert_admin', '1')
@@ -152,10 +201,14 @@ class TestKeystoneRequires(test_utils.PatchHelper):
             'endpoint.some-relation.changed')
 
     def test_register_endpoints(self):
+        self.patch_object(requires.reactive, 'is_flag_set')
+        self.is_flag_set.return_value = True
         relation = mock.MagicMock()
         self.patch_target('_relations')
         self._relations.__iter__.return_value = [relation]
-        self.target.register_endpoints('s', 'r', 'p_url', 'i_url', 'a_url')
+        self.target.register_endpoints(
+            's', 'r', 'p_url', 'i_url', 'a_url',
+            service_type='stype', service_description='sdesc')
         result = {
             'service': 's',
             'public_url': 'p_url',
@@ -164,6 +217,21 @@ class TestKeystoneRequires(test_utils.PatchHelper):
             'region': 'r',
         }
         relation.to_publish_raw.update.assert_called_once_with(result)
+        # This should only happen when the charm is the leader and
+        # register_endpoints is called with type and description
+        # information.
+        relation.to_publish_app_raw.update.assert_called_once_with({
+            'region': 'r',
+            'service-endpoints': json.dumps([{
+                "admin_url": "a_url",
+                "description": "sdesc",
+                "internal_url": "i_url",
+                "public_url": "p_url",
+                "service_name": "s",
+                "type": "stype"}],
+                sort_keys=True
+            )
+        })
 
     def test_register_endpoints_requested_roles(self):
         relation = mock.MagicMock()
