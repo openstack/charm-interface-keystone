@@ -272,5 +272,5 @@ class KeystoneRequires(reactive.Endpoint, metaclass=KeystoneAutoAccessors):
         :rtype: dict
         """
         if self.ep_changed():
-            return json.loads(self.ep_changed())
+            return self.ep_changed()
         return {}

@@ -295,7 +295,7 @@ class TestKeystoneRequires(test_utils.PatchHelper):
     def test_endpoint_checksums(self):
         self.patch_target('ep_changed')
         self.target.ep_changed.return_value = (
-            '{"nova": "abxcxv", "neutron": "124252"}'
+            {"nova": "abxcxv", "neutron": "124252"}
         )
         result = {
             'nova': 'abxcxv',
